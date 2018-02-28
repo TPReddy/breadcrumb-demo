@@ -38,10 +38,10 @@ public class BreadcrumbUse extends WCMUse {
         while (startLevel < currentLevel - endLevel) {
             Page trailPage = getCurrentPage().getAbsoluteParent(startLevel);
             LOGGER.debug("Trail Page Path is {}", trailPage.getPath());
-            ValueMap test  =  trailPage.getProperties();
-            String hideInBreadcrumb = test.getOrDefault("hideInBread", "false").toString();
+            ValueMap valueMap  =  trailPage.getProperties();
+            String hideInBreadcrumb = valueMap.getOrDefault("hideInBread", "false").toString();
             if(hideInBreadcrumb != null && hideInBreadcrumb.equalsIgnoreCase("false")){
-	            this.getNavList().add(trailPage);	           
+	            this.getNavList().add(trailPage);           
             }
             startLevel++;
         }
