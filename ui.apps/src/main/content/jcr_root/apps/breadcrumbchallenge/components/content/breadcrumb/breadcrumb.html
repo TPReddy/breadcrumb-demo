@@ -1,0 +1,9 @@
+<div class="breadcrumbs" data-sly-use.breadcrumb="com.breadcrumb.challenge.challenge.core.use.BreadcrumbUse">
+          <div class="container">
+              <div class="breadcrumbs__inner">
+              	<sly data-sly-list.element="${breadcrumb.navList}">
+					<a href="${element.path}.html">${element.title || element.name}</a>
+                </sly>
+		      </div>
+          </div>
+</div>

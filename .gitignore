@@ -1,0 +1,60 @@
+# Java noise
+*.class
+
+# SCM directories
+.svn
+.git
+.cvs
+
+# Archive files
+*.zip
+*.tar.gz
+*.gz
+*.tar
+*.rar
+
+# OSX noise
+.DS_Store
+*.pbxuser
+profile
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Windows noise
+desktop.ini
+
+# Eclipse/Flash Builder noise
+.actionScriptProperties
+.flexProperties
+.project
+.classpath
+bin/*
+bin-debug/*
+report/*
+bin-test/*
+docs/*
+.flexLibProperties
+
+# Maven noise
+target/*
+
+# Project specific
+*/.settings/*
+*/target/*
+*/.gitignore
+.settings/*
+/target
+*/classes/*
+dependency-reduced-pom.xml
+*/dependency-reduced-pom.xml
+.lazybones/*
+ups-ui/src/main/content/jcr_root/META-INF/MANIFEST.MF
+
+ups-ui/src/main/content/jcr_root/WEB-INF/*
+
+# File Vault
+.vlt
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Breadcrumb"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <absParent
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                        defaultValue="2"
+                        fieldDescription="(eg: 1 for /content/breadcrumbchallenge)"
+                        fieldLabel="Parent Level (absolute)"
+                        min="{Long}1"
+                        name="./absParent"/>
+                    <relParent
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                        fieldDescription="(eg: 0 for current page, 1 for a level up and so on)"
+                        fieldLabel="Relative stop level"
+                        min="{Long}0"
+                        name="./relParent"/>
+                </items>
+            </tab>
+        </items>
+    </content>
+</jcr:root>
